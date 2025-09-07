@@ -91,7 +91,7 @@ const WatchList = () => {
                     `${item.price_change_percentage_24h}`}
                   %
                 </td>
-                <td className="green">
+                <td>
                   <SparklineChart
                     value={item.sparkline_in_7d}
                     chartColor={

@@ -43,13 +43,10 @@ const dataSlice = createSlice({
         }
       });
     },
-    addToWatchlist: (state, action) => {
-      console.log("action", action);
+    addToWatchlist: (state) => {
       const checkedTokens = state.tokenData.filter((t) => t.checked);
-      console.log("DDD", checkedTokens);
       checkedTokens.forEach((token) => {
         const exists = state.watchlist.find((w) => w.id === token.id);
-        console.log("EXIS", exists);
 
         if (!exists) {
           state.watchlist.push({
@@ -65,7 +62,6 @@ const dataSlice = createSlice({
     setChecked: (state, action) => {
       const { id, checked } = action.payload;
       const token = state.tokenData.find((t) => t.id === id);
-      console.log("CCC", checked);
       if (token) {
         token.checked = checked;
       }

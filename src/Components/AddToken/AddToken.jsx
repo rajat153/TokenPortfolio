@@ -85,7 +85,7 @@ const AddToken = () => {
                       />
                       {item.name} {`(${item.symbol.toUpperCase()})`}
                     </div>
-                    <label class="radio-container" id={item.id}>
+                    <label className="radio-container" id={item.id}>
                       {item.checked && (
                         <i
                           className="fa fa-star"
@@ -100,7 +100,7 @@ const AddToken = () => {
                         onChange={(e) => handleCheck(item.id, e.target.checked)}
                         name={item.id}
                       />
-                      <span class="checkmark"></span>
+                      <span className="checkmark"></span>
                     </label>
                   </div>
                 );

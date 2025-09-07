@@ -5,10 +5,8 @@ import { useSelector } from 'react-redux'
 
 const PortFolio = () => {
     const { watchlist } = useSelector((store) => store.data);
-    console.log("SAA", watchlist)
     const totalPortfolioSum = watchlist.reduce((acc, cumm)=>acc + cumm.value , 0);
     const lastUpdateDate = watchlist[0]?.last_updated;
-    console.log("Aaa", totalPortfolioSum)
   return (
     <section className='section'>
       <div className='left'>
