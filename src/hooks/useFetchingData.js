@@ -12,7 +12,7 @@ const options = {
   },
 };
 
-const useFetchData = () => {
+const useFetchingData = () => {
   const dispatch = useDispatch();
   const data = useSelector((store) => store.data.tokenData);
 
@@ -41,4 +41,4 @@ const useFetchData = () => {
   return { fetchDatawithRetry, data };
 };
 
-export default useFetchData;
+export default useFetchingData;

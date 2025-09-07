@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import useFetchingData from '../../hooks/useFetchingData'
 import "./WatchList.css";
 import Pagination from "../Pagination/Pagination";
-import useFetchData from "../../hooks/usefetchData";
 import SparklineChart from "../Charts/SparkLineChart";
 import AddToken from "../AddToken/AddToken";
 import { setHolding } from "../../utils/store/dataSlice";
@@ -11,7 +11,7 @@ const WatchList = () => {
   const dispatch = useDispatch();
   const [editRow, setEditRow] = useState(null);
   const [tempHoldings, setTempHoldings] = useState({});
-  const { fetchDatawithRetry } = useFetchData();
+  const { fetchDatawithRetry } = useFetchingData();
   const { watchlist } = useSelector((store) => store.data);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
